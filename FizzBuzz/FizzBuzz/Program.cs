@@ -15,12 +15,20 @@ namespace FizzBuzz
             return string.Empty;
         }
 
+        public static string MultipleDeCinq(int nombre)
+        {
+            if ((nombre % 5) == 0)
+                return "Buzz";
+            return string.Empty;
+        }
+
         static void Main(string[] args)
         {
             for(int i = 1; i <= 100; i++)
             {
                 string s = string.Empty;
                 s = MultipleDeTrois(i);
+                s += MultipleDeCinq(i);
                 Console.WriteLine(string.Format("Nombre : {0}, valeur : {1}",i,s));
             }
             Console.ReadKey();
